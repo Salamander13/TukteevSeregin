@@ -9,11 +9,11 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="61*"/>
-            <RowDefinition Height="309*"/>
-            <RowDefinition Height="49*"/>
+            <RowDefinition Height="358*"/>
+            <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
-        <Rectangle Fill = "#FFF4F4F5" StrokeThickness="0" Grid.RowSpan="3" HorizontalAlignment="Right" Width="792" Height="419" VerticalAlignment="Top"/>
+        <Rectangle Fill = "#FFF4F4F5" StrokeThickness="0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="792" Height="419" VerticalAlignment="Top"/>
         <Button x:Name="ButtonBack" Content="Back" Margin="0,0,707,10" Height="41" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Click="ButtonBack_Click"/>
-        <Frame x:Name="MainFrame" Source="Pages/AuthPage.xaml"  HorizontalAlignment="Left" Height="328" Grid.Row="1" VerticalAlignment="Top" Width="792" Navigated="MainFrame_OnNavigated" Grid.RowSpan="2"/>
+        <Frame x:Name="MainFrame" Source="Pages/CustomerMenu.xaml"  HorizontalAlignment="Left" Height="358" Grid.Row="1" VerticalAlignment="Top" Width="792" Navigated="MainFrame_OnNavigated"/>
     </Grid>
 </Window>

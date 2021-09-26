@@ -38,5 +38,10 @@ namespace WpfApp8.Pages
         {
             NavigationService?.Navigate(new Menu());
         }
+
+        private void Calc_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new Calc());
+        }
     }
 }
