@@ -27,7 +27,7 @@ namespace WpfApp8.Pages
 
         private void Page1_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new Page1());
+            NavigationService?.Navigate(new RegisterPage());
         }
 
         private void Page2_Click(object sender, RoutedEventArgs e)
@@ -39,9 +39,6 @@ namespace WpfApp8.Pages
             NavigationService?.Navigate(new Menu());
         }
 
-        private void Calc_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService?.Navigate(new Calc());
-        }
+
     }
 }
