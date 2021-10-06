@@ -72,17 +72,24 @@ namespace WpfApp8
         void Export() 
         {
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Text file (*.txt)|*.txt";
+            sfd.Filter = "Text file (*.txt)|*.txt";         
             if (sfd.ShowDialog() == true)
             {
-                
+                StreamWriter sw = new StreamWriter(sfd.FileName);
                 using (var db = new Entities())
                 {
                     var user = db.User.AsNoTracking().ToList();
-                    string IDline = String.Join(":", db.User.Select(x => x.ID));
-                    File.WriteAllText(sfd.FileName, IDline);
-
-
+                    string IDline = ":" + String.Join(":", db.User.Select(x => x.ID));
+                    sw.WriteLine(IDline);
+                    string Loginline = ":" + String.Join(":", db.User.Select(x => x.Login));
+                    sw.WriteLine(Loginline);
+                    string Passwordline = ":" + String.Join(":", db.User.Select(x => x.Password));
+                    sw.WriteLine(Passwordline);
+                    string FIOline = ":" + String.Join(":", db.User.Select(x => x.FIO));
+                    sw.WriteLine(FIOline);
+                    string Roleline = ":" + String.Join(":", db.User.Select(x => x.Role));
+                    sw.WriteLine(Roleline);
+                    sw.Close();
                 }
                 Process.Start("notepad.exe", sfd.FileName);
             }
@@ -108,7 +115,7 @@ namespace WpfApp8
                         {
                             for (int j = 1; j < data.Length; j++)      
                             {
-                                line += data[j]; 
+                                line += data[j] + ";"; 
                             }
                         }
                         lines[i] = line;

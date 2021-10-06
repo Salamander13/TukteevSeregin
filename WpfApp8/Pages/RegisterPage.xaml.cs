@@ -74,7 +74,8 @@ namespace WpfApp8.Pages
                     };
                     db.User.Add(userObject);
                     db.SaveChanges();
-                } MessageBox.Show("Пароли не совподают");
+                } else 
+                   MessageBox.Show("Пароли не совподают");
             }
             
           
