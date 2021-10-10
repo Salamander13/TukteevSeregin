@@ -43,4 +43,12 @@
         <Setter Property="FontFamily" Value="Tahoma"/>
         <Setter Property="FontSize" Value="12pt"/>
     </Style>
+    <Style TargetType="DatePicker">
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="FontFamily" Value="Tahoma"/>
+        <Setter Property="FontSize" Value="12pt"/>
+    </Style>
+
 </ResourceDictionary>

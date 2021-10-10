@@ -9,8 +9,8 @@
       Title="CustomerMenu">
 
     <Grid>
-        <Button x:Name="Page1" Content="Переход 1" HorizontalAlignment="Left" Margin="289,87,0,0" VerticalAlignment="Top" Width="217" Height="45" Click="Page1_Click"/>
-        <Button x:Name="Page2" Content="Переход 2" HorizontalAlignment="Left" Margin="289,156,0,0" VerticalAlignment="Top" Width="217" Height="48"/>
-        <Button x:Name="Page3" Content="Переход 3" HorizontalAlignment="Left" Margin="289,233,0,0" VerticalAlignment="Top" Width="217" Height="46"/>
+        <Button x:Name="Page1" Content="Товары" HorizontalAlignment="Left" Margin="289,87,0,0" VerticalAlignment="Top" Width="217" Height="45" Click="Page1_Click"/>
+        <Button x:Name="Page2" Content="Заказы" HorizontalAlignment="Left" Margin="289,156,0,0" VerticalAlignment="Top" Width="217" Height="48"  Click="Page2_Click"/>
+        <Button x:Name="Page3" Content="Поставщики" HorizontalAlignment="Left" Margin="289,233,0,0" VerticalAlignment="Top" Width="217" Height="46"  Click="Page3_Click"/>
     </Grid>
 </Page>

@@ -16,29 +16,29 @@ using System.Windows.Shapes;
 namespace WpfApp8.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для CustomerMenu.xaml
+    /// Логика взаимодействия для ProductPage.xaml
     /// </summary>
-    public partial class CustomerMenu : Page
+    public partial class ProductPage : Page
     {
-        public CustomerMenu()
+        public ProductPage()
         {
             InitializeComponent();
+            DataGridProduct.ItemsSource = Entities.GetContext().Products.ToList();
         }
 
-        private void Page1_Click(object sender, RoutedEventArgs e)
+        private void ButtonAdd_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new ProductPage());
+            NavigationService?.Navigate(new AddEditPage());
         }
 
-        private void Page2_Click(object sender, RoutedEventArgs e)
+        private void ButtonEdit_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new OrdersPage());
+
         }
-        private void Page3_Click(object sender, RoutedEventArgs e)
+
+        private void ButtonDel_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService?.Navigate(new SupplierPage());
+
         }
-
-
     }
 }
