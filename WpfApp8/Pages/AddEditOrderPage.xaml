@@ -31,13 +31,13 @@
         <TextBlock Text="Цена заказа" Grid.Row="5" Grid.Column="0" Margin="10,0,0,0"/>
         <TextBlock Text="Адрес доставки" Grid.Row="6" Grid.Column="0" Margin="10,0,0,0"/>
 
-        <TextBox Grid.Row="0" Grid.Column="1"/>
-        <TextBox Grid.Row="1" Grid.Column="1"/>
-        <TextBox Grid.Row="2" Grid.Column="1"/>
-        <TextBox Grid.Row="3" Grid.Column="1"/>
-        <TextBox Grid.Row="4" Grid.Column="1"/>
-        <TextBox Grid.Row="5" Grid.Column="1"/>
-        <TextBox Grid.Row="6" Grid.Column="1"/>
+        <TextBox Text="{Binding Customers.Customer_id}" Grid.Row="0" Grid.Column="1"/>
+        <TextBox Text="{Binding Products.Product_id}" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Text="{Binding Employees.Employee_id}" Grid.Row="2" Grid.Column="1"/>
+        <TextBox Text="{Binding Product_quntity}" Grid.Row="3" Grid.Column="1"/>
+        <TextBox Text="{Binding Discount}" Grid.Row="4" Grid.Column="1"/>
+        <TextBox Text="{Binding Order_price}" Grid.Row="5" Grid.Column="1"/>
+        <TextBox Text="{Binding Delivery_addres}" Grid.Row="6" Grid.Column="1"/>
 
         <Button Name="ButtonSave" Content="Сохранить" Grid.Row="7" Grid.ColumnSpan="2" Click="ButtonSave_OnClick"/>
     </Grid>
