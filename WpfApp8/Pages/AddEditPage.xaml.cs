@@ -48,6 +48,7 @@ namespace WpfApp8.Pages
             }
             else
             {
+                Convert.ToDateTime(_products.Date_of_receipt);
                 if (_products.Product_id == 0)
                 Entities.GetContext().Products.Add(_products);
                 try
@@ -62,6 +63,5 @@ namespace WpfApp8.Pages
             }
 
         }
-
     }
 }
