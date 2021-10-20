@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WpfApp8.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ProductPage">
+      Title="ProductPage" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -18,7 +18,7 @@
                 <DataGridTextColumn Header="Название товара" Binding="{Binding Product_name}" Width="105"/>
                 <DataGridTextColumn Header="Дата получения" Binding="{Binding Date_of_receipt}" Width="100"/>
                 <DataGridTextColumn Header="Цена" Binding="{Binding Unit_price}" Width="50"/>
-                <DataGridTextColumn Header="ID поставки" Binding="{Binding Supply.Supply_id}" Width="80"/>
+                <DataGridTextColumn Header="ID поставки" Binding="{Binding Supply_id}" Width="50"/>
                 <DataGridTemplateColumn Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
