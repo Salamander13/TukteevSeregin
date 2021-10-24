@@ -39,6 +39,14 @@ namespace WpfApp8.Pages
             NavigationService?.Navigate(new SupplierPage());
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new UserPage());
+        }
 
+        private void Page4_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new ProductPagePhotos());
+        }
     }
 }

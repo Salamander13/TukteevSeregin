@@ -25,6 +25,7 @@ namespace WpfApp8
         public System.DateTime Date_of_receipt { get; set; }
         public int Unit_price { get; set; }
         public Nullable<int> Supply_id { get; set; }
+        public string Photo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Orders> Orders { get; set; }

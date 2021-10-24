@@ -45,6 +45,7 @@
           <Property Name="Date of receipt" Type="datetime" Nullable="false" />
           <Property Name="Unit price" Type="int" Nullable="false" />
           <Property Name="Supply id" Type="int" />
+          <Property Name="Photo" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Supplier">
           <Key>
@@ -75,6 +76,7 @@
           <Property Name="Role" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="FIO" Type="nvarchar" MaxLength="50" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar(max)" />
         </EntityType>
         <Association Name="FK_Order_Customers">
           <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
@@ -216,6 +218,7 @@
           <Property Name="Supply_id" Type="Int32" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Products" FromRole="Products" ToRole="Orders" />
           <NavigationProperty Name="Supply" Relationship="Self.FK_Products_Supply" FromRole="Products" ToRole="Supply" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Supplier">
           <Key>
@@ -249,6 +252,7 @@
           <Property Name="Role" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="FIO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Order_Customers">
           <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
@@ -382,6 +386,7 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="ПрактическаяModel.Products">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
                 <ScalarProperty Name="Product_id" ColumnName="Product id" />
                 <ScalarProperty Name="Product_name" ColumnName="Product name" />
                 <ScalarProperty Name="Date_of_receipt" ColumnName="Date of receipt" />
@@ -415,6 +420,7 @@
           <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="ПрактическаяModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Role" ColumnName="Role" />
