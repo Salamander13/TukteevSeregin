@@ -25,6 +25,35 @@ namespace WpfApp8.Pages
             InitializeComponent();
             var currentProduct = Entities.GetContext().Products.ToList();
             ListUser.ItemsSource = currentProduct;
+            CmbSorting.SelectedIndex = 0;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            UpdateProducts();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            UpdateProducts();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UserText.Text = null;
+            CmbSorting.SelectedIndex = 0;
+        }
+
+        private void UpdateProducts()
+        {
+            var currentProducts = Entities.GetContext().Products.ToList();
+
+            currentProducts = currentProducts.Where(x => x.Product_name.ToLower().Contains(UserText.Text.ToLower())).ToList();
+
+            if (CmbSorting.SelectedIndex == 0)
+                ListUser.ItemsSource = currentProducts.OrderBy(x => x.Product_name).ToList();
+            else ListUser.ItemsSource = currentProducts.OrderByDescending(x => x.Product_name).ToList();
+
         }
     }
 }

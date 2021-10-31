@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <ListView Name="ListUser" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
@@ -31,9 +31,9 @@
                                 </Binding>
                             </Image.Source>
                         </Image>
-                        <TextBlock VerticalAlignment="Center" TextAlignment="Center" Width="450" Grid.Row="0" TextWrapping="Wrap" Text="{Binding Product_name}" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                        <TextBlock  TextAlignment="Center" Width="450" Grid.Row="0" TextWrapping="Wrap" Text="{Binding Product_name}" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
 
-                        <TextBlock VerticalAlignment="Center" TextAlignment="Left" Width="450" Grid.Row="2" HorizontalAlignment="Center" FontSize="18" Text="{Binding Unit_price}"/>
+                        <TextBlock  TextAlignment="Left" Width="450" Grid.Row="2" HorizontalAlignment="Center" FontSize="18" Text="{Binding Unit_price}"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -45,5 +45,15 @@
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
         </ListView>
+        <WrapPanel HorizontalAlignment="Center" Grid.Row="0">
+            <TextBlock Height="27" FontSize="12">Введите название товара</TextBlock>
+            <TextBox x:Name="UserText" Width="127" Height="29" TextChanged="TextBox_TextChanged" FontSize="12"/>
+            <TextBlock Height="22" FontSize="12">Сортировка названия</TextBlock>
+            <ComboBox x:Name="CmbSorting" Width="117" Height="26" SelectionChanged="ComboBox_SelectionChanged" >
+                <TextBlock FontSize="12">По возрастанию</TextBlock>
+                <TextBlock FontSize="12">По убыванию</TextBlock>
+            </ComboBox>
+            <Button Width="138" Height="30" FontSize="12" Content="Очистить фильтр" Click="Button_Click"/>
+        </WrapPanel>
     </Grid>
 </Page>
