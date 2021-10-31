@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <ListView Name="ListUser" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
@@ -26,7 +26,7 @@
                             <Image.Source>
                                 <Binding Path="Photo">
                                     <Binding.TargetNullValue>
-                                        <ImageSource>/Resources/DefaultPhoto.jpg</ImageSource>
+                                        <ImageSource>/Resources/DefaultPhoto.png</ImageSource>
                                     </Binding.TargetNullValue>
                                 </Binding>
                             </Image.Source>
@@ -44,5 +44,16 @@
             </ListView.ItemsPanel>
 
         </ListView>
+        <WrapPanel HorizontalAlignment="Center" Grid.Row="0">
+            <TextBlock Height="27" FontSize="14">Введите ФИО для поиска</TextBlock>
+            <TextBox x:Name="UserText" Width="127" Height="29" TextChanged="TextBox_TextChanged" FontSize="12"/>
+            <TextBlock Height="22" FontSize="14">Сортировка ФИО</TextBlock>
+            <ComboBox x:Name="CmbSorting" Width="117" Height="26" SelectionChanged="ComboBox_SelectionChanged" >
+                <TextBlock FontSize="12">По возрастанию</TextBlock>
+                <TextBlock FontSize="12">По убыванию</TextBlock>
+            </ComboBox>
+            <CheckBox x:Name="CheckEmployees"  FontSize="12" Height="23" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked">Только продавцы</CheckBox>
+            <Button Width="138" Height="30" FontSize="12" Content="Очистить фильтр" Click="Button_Click"/>
+        </WrapPanel>
     </Grid>
 </Page>

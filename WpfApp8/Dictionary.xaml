@@ -8,7 +8,7 @@
             <Setter Property="Padding" Value="2"/>
             <Setter Property="Margin" Value="2"/>
             <Setter Property="FontFamily" Value="Tahoma"/>
-            <Setter Property="FontSize" Value="12pt"/>
+            <Setter Property="FontSize" Value="10pt"/>
         </Style>
         <Style
  TargetType="Label">
@@ -16,7 +16,7 @@
             <Setter Property="Padding" Value="2"/>
             <Setter Property="Margin" Value="2"/>
             <Setter Property="FontFamily" Value="Tahoma"/>
-            <Setter Property="FontSize" Value="12pt"/>
+            <Setter Property="FontSize" Value="10pt"/>
         </Style>
         <Style
  TargetType="PasswordBox">
@@ -24,7 +24,7 @@
             <Setter Property="Padding" Value="2"/>
             <Setter Property="Margin" Value="2"/>
             <Setter Property="FontFamily" Value="Tahoma"/>
-            <Setter Property="FontSize" Value="12pt"/>
+            <Setter Property="FontSize" Value="10pt"/>
         </Style>
         <Style
  TargetType="Button">
@@ -32,7 +32,7 @@
             <Setter Property="Padding" Value="2"/>
             <Setter Property="Margin" Value="2"/>
             <Setter Property="FontFamily" Value="Tahoma"/>
-            <Setter Property="FontSize" Value="12pt"/>
+            <Setter Property="FontSize" Value="10pt"/>
             <Setter Property="Background" Value="Gray"/>
             <Setter Property="Foreground" Value="Black"/>
         </Style>
@@ -41,14 +41,14 @@
         <Setter Property="Padding" Value="2"/>
         <Setter Property="Margin" Value="2"/>
         <Setter Property="FontFamily" Value="Tahoma"/>
-        <Setter Property="FontSize" Value="12pt"/>
+        <Setter Property="FontSize" Value="10pt"/>
     </Style>
     <Style TargetType="DatePicker">
         <Setter Property="Height" Value="35"/>
         <Setter Property="Padding" Value="2"/>
         <Setter Property="Margin" Value="2"/>
         <Setter Property="FontFamily" Value="Tahoma"/>
-        <Setter Property="FontSize" Value="12pt"/>
+        <Setter Property="FontSize" Value="10pt"/>
     </Style>
 
 </ResourceDictionary>
