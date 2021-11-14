@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <Rectangle Fill = "#FFF4F4F5" StrokeThickness="0" Grid.Row="0"/>
         <Button x:Name="ButtonBack" Content="Back" Margin="0,0,707,16" Height="31" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75" Click="ButtonBack_Click"/>
-        <Frame x:Name="MainFrame" Source="Pages/CustomerMenu.xaml"  HorizontalAlignment="Left"  VerticalAlignment="Top" Navigated="MainFrame_OnNavigated" Margin="0,0,0,0" NavigationUIVisibility="Hidden" Grid.Row="1" />
+        <Frame x:Name="MainFrame" Source="Pages/AuthPage.xaml"  HorizontalAlignment="Left"  VerticalAlignment="Top" Navigated="MainFrame_OnNavigated" Margin="0,0,0,0" NavigationUIVisibility="Hidden" Grid.Row="1" />
         <Button x:Name="Export1" Content="Экспорт" Margin="0,0,460,16" Height="31" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="143" Click="Export_Click"/>
         <Button x:Name="Import1" Content="Импорт" Margin="0,0,206,16" Height="31" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="143" Click="Import1_Click"/>
         <Button x:Name="Calc1" Content="Калькулятор" Margin="0,0,10,16" Height="31" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="143" Click="Calc_Click"/>

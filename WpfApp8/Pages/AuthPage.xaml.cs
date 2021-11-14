@@ -27,34 +27,40 @@ namespace WpfApp8.Pages
 
         private void ButtonEnter_OnClick(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(TextBoxLogin.Text) || string.IsNullOrEmpty(PasswordBox.Password))
+            Auth(TextBoxLogin.Text, PasswordBox.Password);
+
+        }
+
+        public bool Auth(string login, string password)
+        {
+            if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Введение логин и пароль!");
-                return;
+                return false;
             }
 
             using (var db = new Entities())
             {
-                var user = db.User.AsNoTracking().FirstOrDefault(u => u.Login == TextBoxLogin.Text && u.Password == PasswordBox.Password);
+                var user = db.User.AsNoTracking().FirstOrDefault(u => u.Login == login && u.Password == password);
 
                 if (user == null)
                 {
                     MessageBox.Show("Пользователь с такими данными не найден!");
-                    return;
+                    return false;
                 }
 
                 MessageBox.Show("Пользователь успешно найден!");
                 switch (user.Role)
                 {
-                    case "Заказчик ":
-                        NavigationService?.Navigate(new Menu());
+                    case "Director":
+                        NavigationService?.Navigate(new CustomerMenu());
                         break;
-                    case "Директор ":
-                        NavigationService?.Navigate(new Menu());
+                    case "Админ":
+                        NavigationService?.Navigate(new CustomerMenu());
                         break;
                 }
+                return true;
             }
-
         }
 
         private void ButtonRegistration_OnClick(object sender, RoutedEventArgs e)
